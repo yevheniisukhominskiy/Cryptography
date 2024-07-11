@@ -3,14 +3,50 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.cryptography.MainController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.cryptography.controllers.MainController">
+  <left>
+    <VBox fx:id="leftPanel" spacing="10" alignment="CENTER">
+      <Label text="Cryptograph" styleClass="title-label"/>
+      <TextField fx:id="shiftField" promptText="Shift" maxWidth="Infinity"/>
+      <ChoiceBox fx:id="modeChoiceBox" maxWidth="Infinity" styleClass="box-mode">
+        <items>
+          <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Encrypt" />
+            <String fx:value="Decrypt" />
+            <String fx:value="Brute-force" />
+            <String fx:value="Statistical Analysis" />
+          </FXCollections>
+        </items>
+      </ChoiceBox>
+
+      <VBox VBox.vgrow="ALWAYS"/>
+
+      <Button fx:id="chooseFileButton" text="Choose File" maxWidth="Infinity"/>
+      <Button fx:id="startButton" text="Start" maxWidth="Infinity"/>
+    </VBox>
+  </left>
+  <center>
+    <VBox fx:id="rightPanel" spacing="10">
+      <TabPane fx:id="tabPane">
+        <Tab text="Encrypt"/>
+        <Tab text="Decrypt"/>
+        <Tab text="Brute-force"/>
+        <Tab text="Statistical Analysis"/>
+      </TabPane>
+      <TextArea fx:id="fileTextArea" promptText="File content will be displayed here" VBox.vgrow="ALWAYS"/>
+    </VBox>
+  </center>
+</BorderPane>
+
+
+
