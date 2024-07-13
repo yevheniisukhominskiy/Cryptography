@@ -1,52 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.TextField?>
-
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.collections.FXCollections?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
 <?import java.lang.String?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.cryptography.controllers.MainController">
-  <left>
-    <VBox fx:id="leftPanel" spacing="10" alignment="CENTER">
-      <Label text="Cryptograph" styleClass="title-label"/>
-      <TextField fx:id="shiftField" promptText="Shift" maxWidth="Infinity"/>
-      <ChoiceBox fx:id="modeChoiceBox" maxWidth="Infinity" styleClass="box-mode">
-        <items>
-          <FXCollections fx:factory="observableArrayList">
-            <String fx:value="Encrypt" />
-            <String fx:value="Decrypt" />
-            <String fx:value="Brute-force" />
-            <String fx:value="Statistical Analysis" />
-          </FXCollections>
-        </items>
-      </ChoiceBox>
 
-      <VBox VBox.vgrow="ALWAYS"/>
+<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.cryptography.controllers.MainController">
+  <VBox spacing="10" styleClass="left-panel">
+    <Label text="Cryptograph" styleClass="title"/>
+    <Label text="Shift Number"/>
+    <TextField fx:id="shiftNumber" styleClass="input-field"/>
+    <Label text="Mode"/>
+    <ComboBox fx:id="modeSelection" styleClass="input-field" maxWidth="Infinity"/>
 
-      <Button fx:id="chooseFileButton" text="Choose File" maxWidth="Infinity"/>
-      <Button fx:id="startButton" text="Start" maxWidth="Infinity"/>
-    </VBox>
-  </left>
-  <center>
-    <VBox fx:id="rightPanel" spacing="10">
-      <TabPane fx:id="tabPane">
-        <Tab text="Encrypt"/>
-        <Tab text="Decrypt"/>
-        <Tab text="Brute-force"/>
-        <Tab text="Statistical Analysis"/>
-      </TabPane>
-      <TextArea fx:id="fileTextArea" promptText="File content will be displayed here" VBox.vgrow="ALWAYS"/>
-    </VBox>
-  </center>
-</BorderPane>
+    <VBox VBox.vgrow="ALWAYS" />
+
+    <Button text="Select File" styleClass="button" maxWidth="Infinity"/>
+    <Button text="Start" styleClass="button" maxWidth="Infinity"/>
+  </VBox>
+  <TabPane HBox.hgrow="ALWAYS">
+    <Tab text="Encrypt">
+      <TextArea styleClass="input-field"/>
+    </Tab>
+    <Tab text="Decrypt">
+      <TextArea styleClass="input-field"/>
+    </Tab>
+    <Tab text="Brute-force">
+      <TextArea styleClass="input-field"/>
+    </Tab>
+    <Tab text="Analysis">
+      <TextArea styleClass="input-field"/>
+    </Tab>
+  </TabPane>
+</HBox>
 
 
 
