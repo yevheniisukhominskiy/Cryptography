@@ -1,6 +1,7 @@
 module com.cryptography {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.cryptography to javafx.fxml;

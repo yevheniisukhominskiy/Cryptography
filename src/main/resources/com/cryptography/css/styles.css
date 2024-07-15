@@ -1,3 +1,7 @@
+* {
+    -fx-text-fill: white;
+}
+
 .left-panel {
     -fx-background-color: #2c3e50;
     -fx-text-fill: white;
@@ -5,13 +9,10 @@
 }
 
 .title {
-    -fx-font-size: 14px;
+    -fx-font-size: 18px;
     -fx-text-fill: white;
+    -fx-font-weight: bold;
     -fx-padding-bottom: 20px;
-}
-
-.label {
-    -fx-text-fill: white;
 }
 
 .input-field {
@@ -33,26 +34,18 @@
 }
 
 .tab-pane {
-    -fx-background-color: #333333; /* Цвет фона для TabPane */
-}
-
-.tab-pane .tab-header-area {
-    -fx-background-color: #444444; /* Цвет фона для области заголовка вкладок */
+    -fx-background-color: #333333;
 }
 
 .tab {
-    -fx-background-color: #666666; /* Цвет фона для вкладок */
+    -fx-background-color: #666666;
 }
 
 .tab:selected {
     -fx-background-color: #27ae60;
 }
 
-.tab .tab-label {
-    -fx-text-fill: white; /* Цвет текста для вкладок */
-}
-
 .input-field {
-    -fx-background-color: #222222; /* Цвет фона для текстовых полей */
-    -fx-text-fill: white; /* Цвет текста */
+    -fx-background-color: #222222;
+    -fx-text-fill: white;
 }
