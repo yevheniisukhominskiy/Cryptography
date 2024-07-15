@@ -1,0 +1,12 @@
+When it comes to the IT industry, we typically have three gradations of developers depending on their level of expertise: Junior, Middle, and Senior. Or four… just in case you include coding Interns as the lowest-ranked “soldiers” of the software development industry.
+
+And if you think that being an expert in Java development mainly depends on your years of programming experience, this can’t be further from the truth. In reality, a Junior developer might have a longer length of service than a Middle or even a Senior developer. It all comes down to your skills level. That’s why, I’ve decided to paint a clear picture of what it’s like to be an average Junior developer with the skill set you’ll need to earn your “Junior’s” badge, perspectives you’ll get, and the salary levels you can expect. Let’s delve in.
+
+Who is a Junior Developer?
+Who exactly is a Junior Java dev? What’s the difference between a junior and, say, mid-level programmer? A Junior Java developer is an entry-level specialist in the world of developers, and there is a noticeable edge between a junior developer and a middle.
+
+Not to state the obvious, but the main difference is that a Junior developer is usually a “just-graduated” coder who needs to learn many things about this new profession. In contrast, a mid developer already boasts 2 to 4 years of experience behind the belt. Middles already can work alone, whereas Juniors need supervision from Seniors or Leads.
+
+That is to say, Juniors just start their exciting career path and get familiar with the way things are done in modern-day software development. You should be ready that you’ll start with some easy tasks like debugging, writing a code for simple features, and the like.
+
+Ahead, I’d like to delve deeper and shed light on what employers expect from Junior devs, their most desirable skills, and their main responsibilities.
