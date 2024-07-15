@@ -9,27 +9,19 @@
   <VBox spacing="10" styleClass="left-panel">
     <Label text="Cryptograph" styleClass="title"/>
     <Label text="Shift Number"/>
-    <TextField fx:id="shiftNumber" styleClass="input-field"/>
+    <TextField fx:id="shiftField" styleClass="input-field"/>
     <Label text="Mode"/>
     <ComboBox fx:id="modeSelection" styleClass="input-field" maxWidth="Infinity"/>
 
     <VBox VBox.vgrow="ALWAYS" />
 
-    <Button text="Select File" styleClass="button" maxWidth="Infinity"/>
-    <Button text="Start" styleClass="button" maxWidth="Infinity"/>
+    <Button onAction="#handleSelectFile" text="Select File" styleClass="button" maxWidth="Infinity"/>
+    <Button onAction="#handleStart" text="Start" styleClass="button" maxWidth="Infinity"/>
   </VBox>
+
   <TabPane HBox.hgrow="ALWAYS">
     <Tab text="Encrypt">
-      <TextArea styleClass="input-field"/>
-    </Tab>
-    <Tab text="Decrypt">
-      <TextArea styleClass="input-field"/>
-    </Tab>
-    <Tab text="Brute-force">
-      <TextArea styleClass="input-field"/>
-    </Tab>
-    <Tab text="Analysis">
-      <TextArea styleClass="input-field"/>
+      <TextArea fx:id="encryptTextArea" wrapText="true" styleClass="input-field"/>
     </Tab>
   </TabPane>
 </HBox>
